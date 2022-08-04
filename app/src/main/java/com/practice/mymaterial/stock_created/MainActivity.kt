@@ -1,4 +1,4 @@
-package com.practice.mymaterial
+package com.practice.mymaterial.stock_created
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -10,6 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.practice.mymaterial.R
 import com.practice.mymaterial.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
