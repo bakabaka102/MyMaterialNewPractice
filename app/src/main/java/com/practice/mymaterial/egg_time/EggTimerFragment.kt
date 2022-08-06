@@ -44,6 +44,10 @@ class EggTimerFragment : Fragment() {
             getString(R.string.egg_notification_channel_id),
             getString(R.string.egg_notification_channel_name)
         )
+
+        binding.btnNextMain.setOnClickListener {
+
+        }
         return binding.root
     }
 

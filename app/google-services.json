@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "153883838111",
+    "project_id": "mymaterialnewpractice",
+    "storage_bucket": "mymaterialnewpractice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153883838111:android:b5368959f509296344c4aa",
+        "android_client_info": {
+          "package_name": "com.practice.mymaterial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153883838111-073rbclk28l44dvnl1u3c9kmehoprbp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsSe69F6fnwxlpg8b4sl2J_JYbLeR2C6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153883838111-073rbclk28l44dvnl1u3c9kmehoprbp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
