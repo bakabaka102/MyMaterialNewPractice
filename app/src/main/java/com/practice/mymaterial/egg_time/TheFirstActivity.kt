@@ -1,14 +1,15 @@
 package com.practice.mymaterial.egg_time
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.practice.mymaterial.stock_created.MainActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.practice.mymaterial.R
+import com.practice.mymaterial.base_content.BaseActivity
 import com.practice.mymaterial.databinding.ActivityTheFirstBinding
 
-class TheFirstActivity : AppCompatActivity() {
+class TheFirstActivity : BaseActivity() {
 
+    private var mNavController: NavController? = null
     private lateinit var binding: ActivityTheFirstBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,14 +17,17 @@ class TheFirstActivity : AppCompatActivity() {
         binding = ActivityTheFirstBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnNextFirst.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-        }
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.containerFragments) as NavHostFragment
+        mNavController = navHostFragment.navController
 
-        if (savedInstanceState == null) {
+        /*if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, EggTimerFragment.newInstance())
                 .commitNow()
-        }
+        }*/
     }
+
+    override fun getNavController(): NavController? =  mNavController
+
 }

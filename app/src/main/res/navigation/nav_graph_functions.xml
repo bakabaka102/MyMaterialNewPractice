@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph_functions">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_functions"
+    app:startDestination="@id/eggTimerFragment">
 
+    <fragment
+        android:id="@+id/eggTimerFragment"
+        android:name="com.practice.mymaterial.egg_time.EggTimerFragment"
+        android:label="EggTimerFragment"
+        tools:layout="@layout/fragment_egg_timer">
+        <action
+            android:id="@+id/action_eggTimerFragment_to_viewDialFragment"
+            app:destination="@id/viewDialFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewDialFragment"
+        android:name="com.practice.mymaterial.dial_view.ViewDialFragment"
+        android:label="ViewDialFragment"
+        tools:layout="@layout/fragment_view_dial" />
 </navigation>

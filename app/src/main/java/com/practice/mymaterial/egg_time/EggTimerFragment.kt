@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.practice.mymaterial.R
+import com.practice.mymaterial.base_content.BaseFragment
 import com.practice.mymaterial.databinding.FragmentEggTimerBinding
 
 /**
@@ -20,7 +21,7 @@ import com.practice.mymaterial.databinding.FragmentEggTimerBinding
  * Use the [EggTimerFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EggTimerFragment : Fragment() {
+class EggTimerFragment : BaseFragment() {
 
     private val mViewModel: EggTimeViewModel by viewModels()
 
@@ -46,7 +47,7 @@ class EggTimerFragment : Fragment() {
         )
 
         binding.btnNextMain.setOnClickListener {
-
+            getNavController()?.navigate(R.id.viewDialFragment)
         }
         return binding.root
     }
