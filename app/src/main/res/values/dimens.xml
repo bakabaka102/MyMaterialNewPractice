@@ -3,4 +3,5 @@
     <dimen name="_250dp">250dp</dimen>
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_80dp">80dp</dimen>
+    <dimen name="_32sp">32sp</dimen>
 </resources>
