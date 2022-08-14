@@ -28,6 +28,12 @@ class TheFirstActivity : BaseActivity() {
         }*/
     }
 
+    private fun initNavController() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.containerFragments) as NavHostFragment
+        mNavController = navHostFragment.navController
+    }
+
     override fun getNavController(): NavController? =  mNavController
 
 }

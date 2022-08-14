@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_eggTimerFragment_to_viewDialFragment"
             app:destination="@id/viewDialFragment" />
+        <action
+            android:id="@+id/action_eggTimerFragment_to_myCanvasFragment"
+            app:destination="@id/myCanvasFragment" />
     </fragment>
 
     <fragment
@@ -20,4 +23,9 @@
         android:name="com.practice.mymaterial.dial_view.ViewDialFragment"
         android:label="ViewDialFragment"
         tools:layout="@layout/fragment_view_dial" />
+    <fragment
+        android:id="@+id/myCanvasFragment"
+        android:name="com.practice.mymaterial.draw_app.MyCanvasFragment"
+        android:label="fragment_my_canvas"
+        tools:layout="@layout/fragment_my_canvas" />
 </navigation>

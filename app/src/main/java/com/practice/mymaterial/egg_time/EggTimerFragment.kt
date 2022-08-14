@@ -49,6 +49,9 @@ class EggTimerFragment : BaseFragment() {
         binding.btnNextMain.setOnClickListener {
             getNavController()?.navigate(R.id.viewDialFragment)
         }
+         binding.btnNextDraw.setOnClickListener {
+            getNavController()?.navigate(R.id.myCanvasFragment)
+        }
         return binding.root
     }
 

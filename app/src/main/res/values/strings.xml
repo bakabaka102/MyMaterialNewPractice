@@ -61,11 +61,15 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fan_rotate">Fan</string>
     <string name="fan_off">Off</string>
     <string name="fan_low">1</string>
     <string name="fan_medium">2</string>
     <string name="fan_high">3</string>
     <string name="fan_control">Fan control</string>
+
+    <string name="view_draw">Draw</string>
+    <string name="drawingAnnouncement">You are drawing on the screen.</string>
+    <string name="canvasContentDescription">Mini Paint is a simple line drawing app.
+        Drag your fingers to draw. Rotate the phone to clear.</string>
 </resources>
