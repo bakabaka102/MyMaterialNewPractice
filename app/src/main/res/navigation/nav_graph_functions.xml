@@ -28,4 +28,9 @@
         android:name="com.practice.mymaterial.draw_app.MyCanvasFragment"
         android:label="fragment_my_canvas"
         tools:layout="@layout/fragment_my_canvas" />
+    <fragment
+        android:id="@+id/clippedFragment"
+        android:name="com.practice.mymaterial.draw_clip_view.ClippedFragment"
+        android:label="fragment_clipped"
+        tools:layout="@layout/fragment_clipped" />
 </navigation>

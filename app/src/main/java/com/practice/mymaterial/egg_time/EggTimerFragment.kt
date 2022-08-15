@@ -40,7 +40,6 @@ class EggTimerFragment : BaseFragment() {
 //        binding.lifecycleOwner = this.viewLifecycleOwner
 
 
-
         createChannelNotification(
             getString(R.string.egg_notification_channel_id),
             getString(R.string.egg_notification_channel_name)
@@ -49,8 +48,11 @@ class EggTimerFragment : BaseFragment() {
         binding.btnNextMain.setOnClickListener {
             getNavController()?.navigate(R.id.viewDialFragment)
         }
-         binding.btnNextDraw.setOnClickListener {
+        binding.btnNextDraw.setOnClickListener {
             getNavController()?.navigate(R.id.myCanvasFragment)
+        }
+        binding.btnNextClipped.setOnClickListener {
+            getNavController()?.navigate(R.id.clippedFragment)
         }
         return binding.root
     }
