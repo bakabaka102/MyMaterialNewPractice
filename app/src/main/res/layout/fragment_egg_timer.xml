@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:text="@string/fan_rotate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:text="@string/view_draw"
             app:layout_constraintStart_toEndOf="@id/btnNextMain"
             app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -54,10 +54,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:text="@string/view_clipped"
             app:layout_constraintStart_toEndOf="@id/btnNextDraw"
             app:layout_constraintTop_toBottomOf="@id/textView" />
+
+        <Button
+            android:id="@+id/btnSpotLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/spot_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnNextMain" />
 
 
         <!--  android:onItemSelected="@{(parent, view, selection, id)-> eggTimeViewModel.setTimeSelected(selection)}"
@@ -92,9 +102,8 @@
             android:id="@+id/egg_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginHorizontal="80dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:contentDescription="@null"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"

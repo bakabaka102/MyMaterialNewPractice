@@ -54,6 +54,9 @@ class EggTimerFragment : BaseFragment() {
         binding.btnNextClipped.setOnClickListener {
             getNavController()?.navigate(R.id.clippedFragment)
         }
+        binding.btnSpotLight.setOnClickListener {
+            getNavController()?.navigate(R.id.spotLightFragment)
+        }
         return binding.root
     }
 

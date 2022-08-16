@@ -16,6 +16,12 @@
         <action
             android:id="@+id/action_eggTimerFragment_to_myCanvasFragment"
             app:destination="@id/myCanvasFragment" />
+        <action
+            android:id="@+id/action_eggTimerFragment_to_clippedFragment"
+            app:destination="@id/clippedFragment" />
+        <action
+            android:id="@+id/action_eggTimerFragment_to_spotLightFragment"
+            app:destination="@id/spotLightFragment" />
     </fragment>
 
     <fragment
@@ -33,4 +39,9 @@
         android:name="com.practice.mymaterial.draw_clip_view.ClippedFragment"
         android:label="fragment_clipped"
         tools:layout="@layout/fragment_clipped" />
+    <fragment
+        android:id="@+id/spotLightFragment"
+        android:name="com.practice.mymaterial.spot_light.SpotLightFragment"
+        android:label="fragment_spot_light"
+        tools:layout="@layout/fragment_spot_light" />
 </navigation>

@@ -77,4 +77,6 @@
     <string name="clipping">Clipping</string>
     <string name="translated">translated text</string>
     <string name="skewed">"Skewed and "</string>
+
+    <string name="spot_light">SpotLight</string>
 </resources>
