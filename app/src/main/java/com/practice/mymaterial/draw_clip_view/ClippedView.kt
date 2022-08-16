@@ -47,6 +47,8 @@ class ClippedView @JvmOverloads constructor(
     private val rowFour = rowThree + rectInset + clipRectBottom
     private val textRow = rowFour + (1.5f * clipRectBottom)
 
+    private val rejectRow = rowFour + rectInset + 2 * clipRectBottom
+
     private var rectF = RectF(
         rectInset,
         rectInset,
@@ -66,7 +68,7 @@ class ClippedView @JvmOverloads constructor(
         drawOutsideClippingExample(canvas)
         drawSkewedTextExample(canvas)
         drawTranslatedTextExample(canvas)
-        // drawQuickRejectExample(canvas)
+        drawQuickRejectExample(canvas)
     }
 
     private fun drawClippedRectangle(canvas: Canvas?) {
@@ -328,34 +330,39 @@ class ClippedView @JvmOverloads constructor(
      *
      * @param canvas The Canvas on which we are drawing.
      */
-//    private fun drawQuickRejectExample(canvas: Canvas) {
-//        val inClipRectangle = RectF(clipRectRight / 2,
-//            clipRectBottom / 2,
-//            clipRectRight * 2,
-//            clipRectBottom * 2)
-//
-//        val notInClipRectangle = RectF(RectF(clipRectRight+1,
-//            clipRectBottom+1,
-//            clipRectRight * 2,
-//            clipRectBottom * 2))
-//
-//        canvas?.save()
-//        canvas?.translate(columnOne, rejectRow)
-//        canvas?.clipRect(
-//            clipRectLeft,clipRectTop,
-//            clipRectRight,clipRectBottom
-//        )
-//        if (canvas?.quickReject(
-//                inClipRectangle, canvas?.EdgeType.AA)) {
-//            canvas?.drawColor(Color.WHITE)
-//        }
-//        else {
-//            canvas?.drawColor(Color.BLACK)
-//            canvas?.drawRect(inClipRectangle, paint
-//            )
-//        }
-//            canvas?.restore()
-//    }
+    private fun drawQuickRejectExample(canvas: Canvas?) {
+        val inClipRectangle = RectF(
+            clipRectRight / 2,
+            clipRectBottom / 2,
+            clipRectRight * 2,
+            clipRectBottom * 2
+        )
+
+        val notInClipRectangle = RectF(
+            RectF(
+                clipRectRight + 1,
+                clipRectBottom + 1,
+                clipRectRight * 2,
+                clipRectBottom * 2
+            )
+        )
+
+        canvas?.save()
+        canvas?.translate(columnOne, rejectRow)
+        canvas?.clipRect(clipRectLeft, clipRectTop, clipRectRight, clipRectBottom)
+        if (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                canvas?.quickReject(inClipRectangle) == true
+            } else {
+                canvas?.quickReject(inClipRectangle, Canvas.EdgeType.AA) == true
+            }
+        ) {
+            canvas?.drawColor(Color.WHITE)
+        } else {
+            canvas?.drawColor(Color.BLACK)
+            canvas?.drawRect(inClipRectangle, paint)
+        }
+        canvas?.restore()
+    }
 
 
 }
